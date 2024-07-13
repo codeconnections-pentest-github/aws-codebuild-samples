@@ -4,4 +4,4 @@ jobs:
   Hello-World-Job:
     runs-on: codebuild-xguodong-github-app-18967-${{ github.run_id }}-${{ github.run_attempt }}-arm-3.0-small
     steps:
-      - run: echo "Hello World! Update project"
+      - run: echo "Hello World! Trigger 1"
