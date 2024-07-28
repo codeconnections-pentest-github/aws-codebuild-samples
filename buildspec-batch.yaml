@@ -1,0 +1,31 @@
+version: 0.2
+batch:
+  fast-fail: false
+  build-list:
+    - identifier: build1
+      env:
+        variables:
+          BUILD_ID: build1
+      buildspec: |
+        version: 0.2
+        env:
+          shell: bash
+        phases:
+          build:
+            commands:
+              - echo "build1"
+      ignore-failure: true
+
+    - identifier: build2
+      env:
+        variables:
+          BUILD_ID: build2
+      buildspec: |
+        version: 0.2
+        env:
+          shell: bash
+        phases:
+          build:
+            commands:
+              - echo "build2"
+      ignore-failure: true
